@@ -12,7 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:label="Riwayat Keuangan"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +28,8 @@
             android:label="@string/title_activity_pengeluaran"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".IsiPemasukan" />
-        <activity android:name=".IsiPengeluaran"></activity>
+        <activity android:name=".IsiPengeluaran" />
+        <activity android:name=".LihatPemasukan" />
     </application>
 
 </manifest>
