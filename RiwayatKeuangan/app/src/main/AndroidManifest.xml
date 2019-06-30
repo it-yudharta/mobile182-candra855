@@ -30,6 +30,7 @@
         <activity android:name=".IsiPemasukan" />
         <activity android:name=".IsiPengeluaran" />
         <activity android:name=".LihatPemasukan" />
+        <activity android:name=".LihatPengeluaran"></activity>
     </application>
 
 </manifest>

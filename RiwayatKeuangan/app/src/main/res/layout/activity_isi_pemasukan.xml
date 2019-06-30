@@ -94,6 +94,23 @@
         app:layout_constraintStart_toEndOf="@+id/deskripsi_masuk"
         app:layout_constraintTop_toBottomOf="@+id/edt_jumlah_masuk" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Deskripsi bisa diisi tgl (contoh= 01-Januari-2019)"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_deskripsi_masuk" />
+
     <Button
         android:id="@+id/btn_simpan_masuk"
         android:layout_width="120dp"
@@ -103,6 +120,6 @@
         android:text="Tambah"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_deskripsi_masuk" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 </android.support.constraint.ConstraintLayout>

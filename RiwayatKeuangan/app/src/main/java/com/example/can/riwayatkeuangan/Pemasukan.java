@@ -10,16 +10,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.can.riwayatkeuangan.Helper.DBHelper;
+import com.example.can.riwayatkeuangan.Helper.DBMasuk;
+import com.example.can.riwayatkeuangan.adapter.CostumListMasuk;
 import com.example.can.riwayatkeuangan.model.DataMasuk;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Pemasukan extends AppCompatActivity {
 
-    private ArrayList<DataMasuk> ListMasuk = new ArrayList<>();
-    ArrayAdapter adapter;
-    ListView listViewM;
+    private List<DataMasuk> listMasuk = new ArrayList<DataMasuk>();
+    private CostumListMasuk adapter;
+    private ListView listView;
+    private DBMasuk db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +31,12 @@ public class Pemasukan extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        listViewM = findViewById(R.id.list_masuk);
+        db = new DBMasuk(this);
 
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, ListMasuk);
-        listViewM.setAdapter(adapter);
+        listView = findViewById(R.id.list_masuk);
+
+        adapter = new CostumListMasuk(this, listMasuk);
+        listView.setAdapter(adapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,11 +50,12 @@ public class Pemasukan extends AppCompatActivity {
             }
         });
 
-        listViewM.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getBaseContext(), LihatPemasukan.class);
-                intent.putExtra("transaction.detail", ListMasuk.get(position));
+                Intent intent = new Intent(getBaseContext(),
+                        LihatPemasukan.class);
+                intent.putExtra("trMasuk.detail", listMasuk.get(position));
                 startActivity(intent);
             }
         });
@@ -58,9 +64,9 @@ public class Pemasukan extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        DBHelper dbHelper = new DBHelper(this);
-        ListMasuk = (ArrayList<DataMasuk>) dbHelper.getListMasuk();
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, ListMasuk);
-        listViewM.setAdapter(adapter);
+        DBMasuk dbMasuk = new DBMasuk(this);
+        listMasuk = dbMasuk.getMasuk();
+        adapter = new CostumListMasuk(this, listMasuk);
+        listView.setAdapter(adapter);
     }
 }
