@@ -1,4 +1,0 @@
-#Sun Jan 05 16:00:19 ICT 2020
-base.0=C\:\\Users\\Can\\Desktop\\backup\\Step7\\bkk-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
-path.0=classes.dex
-renamed.0=classes.dex
