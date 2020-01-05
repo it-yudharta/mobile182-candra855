@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/ubah_profil"
+            android:icon="@drawable/ic_account_circle_black"
+            android:title="Ubah Profil" />
+        <item
+            android:id="@+id/application"
+            android:icon="@drawable/ic_get_app_black"
+            android:title="Lamaran" />
+        <!--<item-->
+        <!--android:id="@+id/notification"-->
+        <!--android:icon="@drawable/ic_notifications_black"-->
+        <!--android:title="Pemberitahuan" />-->
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_account_circle_black"
+            android:title="Profil" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_exit_to_app"
+            android:title="Keluar" />
+    </group>
+
+    <item android:title="Lainnya">
+        <menu>
+            <item
+                android:id="@+id/about"
+                android:title="Tentang Aplikasi" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">BKK</string>
+
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_label1">Lowongan</string>
+    <string name="tab_label2">Perusahaan</string>
+
+    <string-array name="department">
+        <item>Akuntansi</item>
+        <item>Multimedia</item>
+        <item>Perhotelan</item>
+        <item>Tata Boga</item>
+        <item>Teknik Komputer Jaringan</item>
+        <item>Teknik Mesin</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Laki- Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+
+    <string name="persyaratan_umum">
+        1. Pria/ Wanita usia maksimal 35 tahun\n
+        2. Pendidikan minimal SMA sederajat\n
+        3. Pengalaman sebagai Marketing\n
+        4. Mempunyai kemampuan komunikasi yang baik\n
+        5. Dapat bekerja secara tim dan individu
+    </string>
+
+    <string name="informasi_lain">
+        1. Bagi anda yang memenuhi kualifikasi silahkan kirimkan lamaran diaplikasi ini \n
+        2. Bagi yang mendapat notifikasi surat lamarannya kami terima, langsung datang kekantor kami untuk melakukan tes interview
+    </string>
+
+    <string name="tentang">
+        Aplikasi Bursa Kerja Khusus SMKN 1 Prigen bertujuan untuk membantu para alumni dalam mendapatkan informasi lowongan pekerjaan.
+    </string>
+
+</resources>
